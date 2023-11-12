@@ -1,9 +1,7 @@
 import math
 import pandas as pd
 import numpy as np
-import seaborn as sns
 import scipy.stats as sts
-import statsmodels.api as sm
 import matplotlib
 
 matplotlib.use('TkAgg')
@@ -19,7 +17,7 @@ for row, dictRow in d.items():
     for oldValue, newValue in dictRow.items():
         data[row] = data[row].replace(oldValue, newValue)
 #print(data.head())
-'''
+
 #data.hist()
 fig1, im = plt.subplots(1, 6)
 im[0].hist(data['age'], bins=15)
@@ -138,4 +136,3 @@ data5 = pd.DataFrame({'Женат': [89,17,11,43,22,1],
                      'Не состоит в отношениях': [35,44,35,6,8,22]})
 data5.index = ['Полный рабочий день','Частичная занятость','Временно неработает','На домохозяйстве','На пенсии','Учёба']
 print(sts.chi2_contingency(data5))
-'''
