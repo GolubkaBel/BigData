@@ -14,6 +14,7 @@ warnings.filterwarnings("ignore")
 data = datasets.fetch_openml('mnist_784', version=1, return_X_y=True)
 pixel_values, targets = data
 targets = targets.astype(int)
+print(data)
 t = time.perf_counter()
 tsne = TSNE(n_components=2, perplexity=25, random_state=42)
 transformed_data = tsne.fit_transform(pixel_values.iloc[:3000, :])

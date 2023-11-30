@@ -1,5 +1,3 @@
-import math
-import multiprocessing
 import time
 from multiprocessing import Pool
 import matplotlib
@@ -53,7 +51,7 @@ for i in range(0, 4):
 plt.plot(effect_list, [t_list[0], t_list[1], t_list[2], t_list[3]],
          color='g', label='(1)')
 plt.plot(effect_list, [t_list_better[0], t_list_better[1], t_list_better[2], t_list_better[3]],
-         color='g', label='(1)')
+         color='r', label='(1)')
 plt.plot()
 plt.xlabel('Effective')
 plt.ylabel('Time')
