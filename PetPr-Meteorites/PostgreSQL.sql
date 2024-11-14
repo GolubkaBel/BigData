@@ -26,6 +26,7 @@ SELECT
     (SELECT cond3.subject_type FROM cond3 WHERE course_users.course_id=cond3.course_id),
     cond2.course_start, cond1.user_id, cond1.user_name,
     (SELECT cond5.city_name FROM cond5 WHERE course_users.user_id=cond5.user_id),
+    course_users.active,
     course_users.created_at AS open_course, --дата создания записи о присвоение курса ученику
 	EXTRACT(MONTH FROM AGE(DATE(TO_TIMESTAMP(cond2.course_start, 'YYYY-MM-DD HH24:MI:SS.MS') + INTERVAL '1 year'), CURRENT_DATE))
             AS full_month_to_end, --полных месяцев осталось сравнительно текущей даты от начала курса
